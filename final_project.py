@@ -1,6 +1,7 @@
 import argparse
 import sys 
 import datetime 
+import os 
 
 def setup():
     parser = argparse.ArgumentParser(description="Python CLI Tool for File Manipulation")
@@ -23,7 +24,24 @@ def log_command(cmd):
         text = f"{cmd} : {time}\n" 
         file.write(text)  
 
+def calculate_space(path):
+    path = path.replace(" ", "")
+
+def ls_():
+    if arguments.ls != "":
+        path = arguments.ls
+        calculate_space(path)
+        for p, dir, file in os.walk(path):
+            for d in dir:
+                print(str(d))
+            for f in file:
+                print(str(f)) 
+
 parser = setup() 
 arguments = parser.parse_args() 
 cmd = " ".join(sys.argv) 
 log_command(cmd)
+if arguments.ls:
+    ls_()
+elif arguments.cd:
+    ...
