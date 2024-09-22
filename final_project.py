@@ -45,3 +45,6 @@ if arguments.ls:
     ls_()
 elif arguments.cd:
     ...
+
+def cd():
+    ...
