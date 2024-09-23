@@ -70,10 +70,30 @@ def handeling_cd():
         print("you do not have permissions to change to {0}".format(path))
 
 def mkdir():
-    ...
+    
+    if arguments.mkdir :
+
+        path = "/tmp/year/month/week/day"
+
+        try : 
+            os.makedirs(path)
+        except OSError :
+            print("creation of the directory %s failed" % path)
+        else :
+            print("Successfully created the directory %s" % path)
 
 def rmdir():
-    ... 
+
+    if arguments.rmdir :
+
+        path = "/tmp/year"
+
+        try :
+            os.rmdir(path)
+        except OSError :
+            print("Deletion of the directory %s filed" % path)
+        else :
+            print("Successfullyy deleted the directory %s" % path)
 
 def rm():
     ...
