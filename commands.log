@@ -54,3 +54,12 @@ final_project.py --rm C:\Users\AFRA service\Desktop\f : 2024-Sep-23 19:07:45
 final_project.py --rmdir C:\Users\AFRA service\Desktop\example : 2024-Sep-23 19:22:43
 final_project.py --mkdir C:\Users\AFRA service\Desktop\p1 : 2024-Sep-23 19:31:17
 final_project.py --rm C:\Users\AFRA service\Desktop\f\app.py : 2024-Sep-23 19:39:23
+final_project.py --mv a,b : 2024-Sep-23 21:47:22
+final_project.py --mv a : 2024-Sep-23 21:47:34
+final_project.py --mv a, b : 2024-Sep-23 21:52:52
+final_project.py --mv a, 123 : 2024-Sep-23 21:53:36
+final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-23 22:01:26
+final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-23 22:03:41
+final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-23 22:04:01
+final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-23 22:04:39
+final_project.py --ls C:\Users\AFRA service\Desktop\new\S08_Function : 2024-Sep-23 22:06:25
