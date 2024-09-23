@@ -38,3 +38,19 @@ final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-22 17:59:23
 final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-22 18:06:12
 c:\Users\Modares\Desktop\Python_CLI_Tool\final_project.py : 2024-Sep-22 19:36:15
 c:\Users\Modares\Desktop\Python_CLI_Tool\final_project.py : 2024-Sep-22 19:37:16
+final_project.py --cd Desktop : 2024-Sep-23 18:05:59
+final_project.py --cd Desktop : 2024-Sep-23 18:08:34
+final_project.py --rmdir f : 2024-Sep-23 18:33:46
+final_project.py --rmdir f : 2024-Sep-23 18:35:13
+final_project.py --rmdir C:\Users\AFRA service\Desktop\f : 2024-Sep-23 18:36:14
+final_project.py --mkdir C:\Users\AFRA service\Desktop\sh : 2024-Sep-23 18:39:27
+final_project.py --cd C:\Users\AFRA service\Desktop\f : 2024-Sep-23 18:44:19
+final_project.py --cd  : 2024-Sep-23 18:47:27
+final_project.py --cd C:\Users\AFRA service\Desktop\f : 2024-Sep-23 18:48:32
+final_project.py --cd C:\Users\AFRA service\Desktop\f : 2024-Sep-23 18:50:30
+final_project.py --rm C:\Users\AFRA service\Desktop\f : 2024-Sep-23 18:59:16
+final_project.py --rm C:\Users\AFRA service\Desktop\f : 2024-Sep-23 19:00:44
+final_project.py --rm C:\Users\AFRA service\Desktop\f : 2024-Sep-23 19:07:45
+final_project.py --rmdir C:\Users\AFRA service\Desktop\example : 2024-Sep-23 19:22:43
+final_project.py --mkdir C:\Users\AFRA service\Desktop\p1 : 2024-Sep-23 19:31:17
+final_project.py --rm C:\Users\AFRA service\Desktop\f\app.py : 2024-Sep-23 19:39:23

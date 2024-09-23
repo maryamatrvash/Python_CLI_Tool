@@ -23,37 +23,23 @@ def log_command(cmd):
         time = time.strftime("%Y-%b-%d %H:%M:%S") 
         text = f"{cmd} : {time}\n" 
         file.write(text)  
-
-def calculate_space(path):
-    path = path.replace(" ", "")
-
-def ls_():
+ 
+def ls(): 
     if arguments.ls != "":
         path = arguments.ls
-        calculate_space(path)
+        path = path.replace(" ", "")
         for p, dir, file in os.walk(path):
             for d in dir:
                 print(str(d))
             for f in file:
                 print(str(f)) 
 
-parser = setup() 
-arguments = parser.parse_args() 
-cmd = " ".join(sys.argv) 
-log_command(cmd)
-if arguments.ls:
-    ls_()
-elif arguments.cd:
-    ...
-
-def cd(path):
-    if arguments.cd:
-        cwd = os.getcwd(path)
-        print("current working directory: {0}".format(cwd))
-        os.chdir('/tmp')
-        print("current working directory: {0}".format(os.getcwd()))
-    else :
-        handeling_cd() 
+def cd():
+    cwd = os.getcwd() 
+    print("current working directory: {0}".format(cwd))
+    os.chdir('/tmp')
+    print("current working directory: {0}".format(os.getcwd()))
+    handeling_cd() 
 
 def handeling_cd():
 
@@ -70,33 +56,31 @@ def handeling_cd():
         print("you do not have permissions to change to {0}".format(path))
 
 def mkdir():
-    
-    if arguments.mkdir :
-
-        path = "/tmp/year/month/week/day"
-
-        try : 
-            os.makedirs(path)
-        except OSError :
-            print("creation of the directory %s failed" % path)
-        else :
-            print("Successfully created the directory %s" % path)
+    path = arguments.mkdir 
+    try : 
+        os.makedirs(path)
+    except OSError :
+        print("creation of the directory %s failed" % path)
+    else :
+        print("Successfully created the directory %s" % path)
 
 def rmdir():
-
-    if arguments.rmdir :
-
-        path = "/tmp/year"
-
-        try :
-            os.rmdir(path)
-        except OSError :
-            print("Deletion of the directory %s filed" % path)
-        else :
-            print("Successfullyy deleted the directory %s" % path)
+    path = arguments.rmdir 
+    try : 
+        os.rmdir(path)
+    except OSError :
+        print("Deletion of the directory %s failed" % path) 
+    else :
+        print("Successfullyy deleted the directory %s" % path)
 
 def rm():
-    ...
+    path = arguments.rm
+    try:
+        os.remove(path)
+    except OSError:
+        print("Deletion of the file %s failed" % path) 
+    else:
+        print("Successfullyy deleted the file %s" % path) 
 
 def rm_r():
     ...
@@ -112,3 +96,28 @@ def find():
 
 def cat():
     ...           
+
+parser = setup() 
+arguments = parser.parse_args() 
+cmd = " ".join(sys.argv) 
+log_command(cmd)
+if arguments.ls:
+    ls()
+elif arguments.cd:
+    cd() 
+elif arguments.mkdir:
+    mkdir()
+elif arguments.rmdir:
+    rmdir()  
+elif arguments.rm:
+    rm()
+elif arguments.rm_r:
+    ...
+elif arguments.cp:
+    ...
+elif arguments.mv:
+    ...
+elif arguments.find:
+    ...
+elif arguments.cat:
+    ...
