@@ -20,7 +20,7 @@ def setup():
 def log_command(cmd):
     with open("commands.log", "a") as file:
         time = datetime.datetime.now()
-        time = time.strftime("%Y-%b-%d %H:%M:%S")
+        time = time.strftime("%Y-%b-%d %H:%M:%S") 
         text = f"{cmd} : {time}\n" 
         file.write(text)  
 
@@ -46,5 +46,49 @@ if arguments.ls:
 elif arguments.cd:
     ...
 
-def cd():
+def cd(path):
+    if arguments.cd:
+        cwd = os.getcwd(path)
+        print("current working directory: {0}".format(cwd))
+        os.chdir('/tmp')
+        print("current working directory: {0}".format(os.getcwd()))
+    else :
+        handeling_cd() 
+
+def handeling_cd():
+
+    path = '/var/www'
+
+    try :  
+        os.chdir(path)
+        print("current working directory: {0}".format(path)) 
+    except FileNotFoundError:
+        print("directory: {0} dose not exist".format(path))
+    except NotADirectoryError :
+        print("{0} is not a directory".format(path))
+    except PermissionError :
+        print("you do not have permissions to change to {0}".format(path))
+
+def mkdir():
     ...
+
+def rmdir():
+    ... 
+
+def rm():
+    ...
+
+def rm_r():
+    ...
+
+def cp():
+    ...
+
+def mv():
+    ...
+
+def find():
+    ...
+
+def cat():
+    ...           
