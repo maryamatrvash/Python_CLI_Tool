@@ -4,6 +4,7 @@ import datetime
 import os 
 
 def setup():
+
     parser = argparse.ArgumentParser(description="Python CLI Tool for File Manipulation")
     parser.add_argument("--ls", type=str, help="List directory contents at path or the current directory if no path is given")
     parser.add_argument("--cd", type=str, help="Change the working directory to path") 
@@ -18,6 +19,7 @@ def setup():
     return parser 
 
 def log_command(cmd):
+
     with open("commands.log", "a") as file:
         time = datetime.datetime.now()
         time = time.strftime("%Y-%b-%d %H:%M:%S") 
@@ -25,6 +27,7 @@ def log_command(cmd):
         file.write(text)  
  
 def ls(): 
+
     path = arguments.ls
     for p, dir, file in os.walk(path): 
         for d in dir:
@@ -33,11 +36,14 @@ def ls():
             print(str(f)) 
 
 def cd():
-    cwd = os.getcwd() 
-    print("current working directory: {0}".format(cwd))
-    os.chdir('/tmp')
-    print("current working directory: {0}".format(os.getcwd()))
-    handeling_cd() 
+
+    print("current working directory before")
+    print(os.getcwd())
+    print()
+    handeling_cd()
+cd()
+os.chdir('../')
+cd() 
 
 def handeling_cd():
 
@@ -54,6 +60,7 @@ def handeling_cd():
         print("you do not have permissions to change to {0}".format(path))
 
 def mkdir():
+
     path = arguments.mkdir 
     try : 
         os.makedirs(path)
@@ -63,6 +70,7 @@ def mkdir():
         print("Successfully created the directory %s" % path)
 
 def rmdir():
+
     path = arguments.rmdir 
     try : 
         os.rmdir(path)
@@ -72,6 +80,7 @@ def rmdir():
         print("Successfullyy deleted the directory %s" % path)
 
 def rm():
+
     path = arguments.rm
     try:
         os.remove(path)
@@ -81,10 +90,16 @@ def rm():
         print("Successfullyy deleted the file %s" % path) 
 
 def rm_r():
-    ...
+
+    path = arguments.rm_r
+    dir_list = os.listdir(path)
+    dict_empty = os.remove(dir_list)
+    print(os.rmdir(dict_empty)) 
 
 def cp():
-    ...
+
+    path = arguments.cp
+    cp [path] 
 
 def mv():
     ...
@@ -98,24 +113,45 @@ def cat():
 parser = setup() 
 arguments = parser.parse_args() 
 cmd = " ".join(sys.argv) 
+
 log_command(cmd)
+
 if arguments.ls:
+
     ls()
+
 elif arguments.cd:
+
     cd() 
+
 elif arguments.mkdir:
+
     mkdir()
+
 elif arguments.rmdir:
-    rmdir()  
+
+    rmdir()
+
 elif arguments.rm:
+
     rm()
+
 elif arguments.rm_r:
+
     ...
+
 elif arguments.cp:
-    ...
+
+    cp()
+
 elif arguments.mv:
+
     ...
+
 elif arguments.find:
+
     ...
+
 elif arguments.cat:
+
     ...
