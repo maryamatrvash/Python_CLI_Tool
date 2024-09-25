@@ -63,3 +63,51 @@ final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-23 22:03:41
 final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-23 22:04:01
 final_project.py --ls C:\Users\AFRA service\Desktop\new : 2024-Sep-23 22:04:39
 final_project.py --ls C:\Users\AFRA service\Desktop\new\S08_Function : 2024-Sep-23 22:06:25
+final_project.py --cd C:\Users\AFRA service\Desktop\new : 2024-Sep-24 23:21:14
+final_project.py --cd C:\Users\AFRA service\Desktop\new : 2024-Sep-24 23:49:00
+final_project.py --rm-r C:\Users\AFRA service\Desktop\new : 2024-Sep-24 23:52:37
+final_project.py --rm-r C:\Users\AFRA service\Desktop\new : 2024-Sep-24 23:53:47
+final_project.py --cd C:\Users\AFRA service\Desktop\new : 2024-Sep-25 00:04:00
+final_project.py --cp C:\Users\AFRA service\Desktop\new : 2024-Sep-25 11:45:49
+final_project.py --cp C:\Users\AFRA service\Desktop\new : 2024-Sep-25 11:46:10
+final_project.py --cp C:\Users\AFRA service\Desktop\new : 2024-Sep-25 11:46:35
+final_project.py --cp C:\Users\AFRA service\Desktop\new\S08_Function : 2024-Sep-25 11:48:03
+final_project.py --cp C:\Users\AFRA service\Desktop\new ,C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 11:50:16
+final_project.py --cp C:\Users\AFRA service\Desktop\new ,C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 11:51:07
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 11:53:13
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:02:45
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:08:05
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:11:21
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:11:26
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:12:42
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:13:28
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:13:48
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:14:37
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:16:00
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:16:58
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:20:40
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:21:14
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:22:01
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:25:21
+final_project.py --cp C:\Users\AFRA service\Desktop\new, C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:26:55
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:33:16
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:43:09
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:48:37
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:49:22
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:52:32
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 12:53:34
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 13:02:29
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 14:12:46
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 14:13:41
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 14:14:10
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 14:38:10
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 14:38:31
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 15:07:23
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 15:12:09
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 15:18:54
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 15:40:56
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 15:42:06
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 15:43:45
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 15:53:22
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 16:49:39
+final_project.py --cp C:\Users\AFRA service\Desktop\new C:\Users\AFRA service\Desktop\p1 : 2024-Sep-25 19:10:13

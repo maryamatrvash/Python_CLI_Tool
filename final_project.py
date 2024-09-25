@@ -2,6 +2,7 @@ import argparse
 import sys 
 import datetime 
 import os 
+import copy 
 
 def setup():
 
@@ -39,17 +40,12 @@ def cd():
 
     print("current working directory before")
     print(os.getcwd())
-    print()
-    handeling_cd()
-cd()
-os.chdir('../')
-cd() 
-
-def handeling_cd():
-
-    path = '/var/www'
+    print() 
+    #handeling_cd() 
+    path = arguments.cd 
 
     try :  
+        os.chdir('../') 
         os.chdir(path)
         print("current working directory: {0}".format(path)) 
     except FileNotFoundError:
@@ -58,6 +54,13 @@ def handeling_cd():
         print("{0} is not a directory".format(path))
     except PermissionError :
         print("you do not have permissions to change to {0}".format(path))
+#cd()
+
+#cd() 
+
+#def handeling_cd(): 
+
+    
 
 def mkdir():
 
@@ -93,13 +96,30 @@ def rm_r():
 
     path = arguments.rm_r
     dir_list = os.listdir(path)
-    dict_empty = os.remove(dir_list)
+    dict_empty = os.remove(dir_list) 
     print(os.rmdir(dict_empty)) 
+
+def find_files(path_pc):
+    files_name = []
+    for p, dirs, files in os.walk(path_pc):
+        for d in dirs:
+            d_path = os.path.join(path_pc, d)
+            for path, dirs, file in os.walk(d_path):
+                for f1 in file:
+                    f1_path = os.path.join(d_path, f1) 
+                    files_name.append(f1_path) 
+        for f in files: 
+            f_path = os.path.join(path_pc, f) 
+            for paths in files_name:
+                if f_path not in files_name:
+                    files_name.append(f_path)  
+    return files_name 
 
 def cp():
 
     path = arguments.cp
-    cp [path] 
+    files = find_files(path[0]) 
+    print(files) 
 
 def mv():
     ...
@@ -138,7 +158,7 @@ elif arguments.rm:
 
 elif arguments.rm_r:
 
-    ...
+    rm_r() 
 
 elif arguments.cp:
 
