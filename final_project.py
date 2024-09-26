@@ -41,7 +41,7 @@ def cd():
     print("current working directory before")
     print(os.getcwd())
     print() 
-    #handeling_cd() 
+
     path = arguments.cd 
 
     try :  
@@ -54,13 +54,7 @@ def cd():
         print("{0} is not a directory".format(path))
     except PermissionError :
         print("you do not have permissions to change to {0}".format(path))
-#cd()
 
-#cd() 
-
-#def handeling_cd(): 
-
-    
 
 def mkdir():
 
@@ -125,7 +119,14 @@ def mv():
     ...
 
 def find():
-    ...
+    
+    path = arguments.find
+    files = os.listdir(path)
+    for files in path:
+        if files.endswith(".py") :
+            print(files)
+        else :
+            print("Not found") 
 
 def cat():
     ...           
@@ -170,7 +171,7 @@ elif arguments.mv:
 
 elif arguments.find:
 
-    ...
+    find()
 
 elif arguments.cat:
 
