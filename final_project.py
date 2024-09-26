@@ -66,7 +66,7 @@ def mkdir():
     else :
         print("Successfully created the directory %s" % path)
 
-def rmdir():
+def rmdir(path = "argument.rmdir"): 
 
     path = arguments.rmdir 
     try : 
@@ -76,7 +76,7 @@ def rmdir():
     else :
         print("Successfullyy deleted the directory %s" % path)
 
-def rm():
+def rm(path = "arguments.rm"):
 
     path = arguments.rm
     try:
@@ -89,9 +89,10 @@ def rm():
 def rm_r():
 
     path = arguments.rm_r
-    dir_list = os.listdir(path)
-    dict_empty = os.remove(dir_list) 
-    print(os.rmdir(dict_empty)) 
+    remove_file = rm(path)
+    del_ditrs = rmdir(remove_file)
+    print(del_ditrs) 
+    print("delete directory")
 
 def find_files(path_pc):
     files_name = []
@@ -123,10 +124,10 @@ def find():
     path = arguments.find
     files = os.listdir(path)
     for files in path:
-        if files.endswith(".py") :
+        if files.split(".")[-1] : 
             print(files)
         else :
-            print("Not found") 
+           print("Not found") 
 
 def cat():
     ...           
