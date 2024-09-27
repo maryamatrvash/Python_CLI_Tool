@@ -2,7 +2,6 @@ import argparse
 import sys 
 import datetime 
 import os 
-import stat 
 
 def setup():
 
@@ -17,6 +16,7 @@ def setup():
     parser.add_argument("--mv", type=str, nargs=2, help="Move a file or directory from sourse to destination")
     parser.add_argument("--find", type=str, nargs=2, help="Search for files or directories matching pattern starting from path")
     parser.add_argument("--cat", type=str, help="Output the contents of the file") 
+    parser.add_argument("--show-logs", action="store_true", help="Show all logs of the program") 
     return parser 
 
 def log_command(cmd):
@@ -25,7 +25,12 @@ def log_command(cmd):
         time = datetime.datetime.now()
         time = time.strftime("%Y-%b-%d %H:%M:%S") 
         text = f"{cmd} : {time}\n" 
-        file.write(text)  
+        file.write(text) 
+
+def show_log(file_name = "commands.log"):
+    with open(file_name, "r") as logs:
+        data = logs.read() 
+    print(data) 
  
 def ls(): 
 
@@ -41,7 +46,7 @@ def cd():
     print("current working directory before")
     print(os.getcwd())
     print() 
-    #handeling_cd() 
+
     path = arguments.cd 
 
     try :  
@@ -54,13 +59,7 @@ def cd():
         print("{0} is not a directory".format(path))
     except PermissionError :
         print("you do not have permissions to change to {0}".format(path))
-#cd()
 
-#cd() 
-
-#def handeling_cd(): 
-
-    
 
 def mkdir():
 
@@ -72,7 +71,7 @@ def mkdir():
     else :
         print("Successfully created the directory %s" % path)
 
-def rmdir():
+def rmdir(path = "argument.rmdir"): 
 
     path = arguments.rmdir 
     try : 
@@ -82,7 +81,7 @@ def rmdir():
     else :
         print("Successfullyy deleted the directory %s" % path)
 
-def rm():
+def rm(path = "arguments.rm"):
 
     path = arguments.rm
     try:
@@ -95,9 +94,10 @@ def rm():
 def rm_r():
 
     path = arguments.rm_r
-    dir_list = os.listdir(path)
-    dict_empty = os.remove(dir_list) 
-    print(os.rmdir(dict_empty)) 
+    remove_file = rm(path)
+    del_ditrs = rmdir(remove_file)
+    print(del_ditrs) 
+    print("delete directory")
 
 def find_files(path_pc):
     files_name = []
@@ -118,16 +118,24 @@ def find_files(path_pc):
 def cp(copy_path, file):
        
     for f in file:
-        with open(f, "rb") as f_read:
+        with open(f, "r") as f_read:
             data = f_read.read()
-        with open(copy_path, "wb") as f_write:
+        with open(copy_path, "w") as f_write: 
             f_write.write(data)   
 
-def mv():
-    ...
+def mv(cut_path, file):
+    
+    cp(cut_path, file) 
+    for f in file:
+        os.remove(f)  
 
 def find():
-    ...
+    
+    path = arguments.find
+    for p, d, file in os.walk(path[0]): 
+        for f in file:
+            if f.endswith(path[1]): 
+                print(f) 
 
 def cat():
     ...           
@@ -164,20 +172,22 @@ elif arguments.rm_r:
 
 elif arguments.cp:
 
-    path = arguments.cp
-    #num_mod = os.chmod(path[0], stat.S_IWRITE) 
-    #num_mod = str(num_mod) 
+    path = arguments.cp  
     files = find_files(path[0])
     cp(path[1], files) 
 
 elif arguments.mv:
 
-    ...
+    path = arguments.mv
+    files = find_files(path[0])
+    mv(path[1], files) 
 
 elif arguments.find:
 
-    ...
+    find()
 
 elif arguments.cat:
 
     ...
+elif arguments.show_logs:
+    show_log() 

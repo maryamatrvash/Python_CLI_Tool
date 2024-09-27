@@ -139,3 +139,7 @@ final_project.py --rm-r C:\Users\AFRA service\Desktop\new : 2024-Sep-26 17:21:58
 final_project.py --cp C:\Users\AFRA service\Desktop\new E:\folder2 : 2024-Sep-26 17:25:34
 c:\Users\AFRA service\Desktop\Python_CLI_Tool\final_project.py : 2024-Sep-27 12:03:00
 final_project.py --cp C:\Users\AFRA service\Desktop\new E:\folder2 : 2024-Sep-27 12:03:46
+c:\Users\AFRA service\Desktop\Python_CLI_Tool\final_project.py : 2024-Sep-27 12:52:10
+final_project.py --cp C:\Users\AFRA service\Desktop\new E:\folder2 : 2024-Sep-27 12:57:39
+final_project.py --mv E:\new E:\folder2 : 2024-Sep-27 19:27:58
+final_project.py --show-logs : 2024-Sep-27 19:46:36
