@@ -73,7 +73,7 @@ def mkdir():
 
 def rmdir(path = "argument.rmdir"): 
 
-    path = arguments.rmdir 
+    #path = arguments.rmdir 
     try : 
         os.rmdir(path)
     except OSError :
@@ -92,12 +92,25 @@ def rm(path = "arguments.rm"):
         print("Successfullyy deleted the file %s" % path) 
 
 def rm_r():
-
+    
     path = arguments.rm_r
-    remove_file = rm(path)
-    del_ditrs = rmdir(remove_file)
-    print(del_ditrs) 
-    print("delete directory")
+    for file in os.listdir(path):
+        f_path = os.path.join(path, file)
+        if "." in os.path.basename(f_path):
+            os.remove(f_path) 
+            print("Files deleted!")  
+        try:
+            os.rmdir(f_path)
+        except:
+            for f in os.listdir(f_path):
+                f2_path = os.path.join(f_path, f)
+                os.remove(f2_path)
+                os.rmdir(f_path)    
+        
+    #remove_file = rm(path)
+    #del_ditrs = rmdir(path) 
+    #print("done")  
+    #print("delete directory") 
 
 def find_files(path_pc):
     files_name = []
@@ -116,12 +129,15 @@ def find_files(path_pc):
     return files_name 
 
 def cp(copy_path, file):
-       
-    for f in file:
-        with open(f, "r") as f_read:
-            data = f_read.read()
-        with open(copy_path, "w") as f_write: 
-            f_write.write(data)   
+
+    try:    
+        for f in file:
+            with open(f, "r") as f_read:
+                data = f_read.read()
+            with open(copy_path, "w") as f_write: 
+                f_write.write(data) 
+    except PermissionError:
+        print("You don't have permission to overwrite on %s" % copy_path)     
 
 def mv(cut_path, file):
     
@@ -131,7 +147,7 @@ def mv(cut_path, file):
 
 def find():
     
-    path = arguments.find
+    path = arguments.find 
     for p, d, file in os.walk(path[0]): 
         for f in file:
             if f.endswith(path[1]): 
@@ -167,8 +183,8 @@ elif arguments.rm:
     rm()
 
 elif arguments.rm_r:
-
-    rm_r() 
+     
+    rm_r()  
 
 elif arguments.cp:
 
