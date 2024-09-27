@@ -2,7 +2,7 @@ import argparse
 import sys 
 import datetime 
 import os 
-import copy 
+import stat 
 
 def setup():
 
@@ -115,11 +115,13 @@ def find_files(path_pc):
                     files_name.append(f_path)  
     return files_name 
 
-def cp():
-
-    path = arguments.cp
-    files = find_files(path[0]) 
-    print(files) 
+def cp(copy_path, file):
+       
+    for f in file:
+        with open(f, "rb") as f_read:
+            data = f_read.read()
+        with open(copy_path, "wb") as f_write:
+            f_write.write(data)   
 
 def mv():
     ...
@@ -162,7 +164,11 @@ elif arguments.rm_r:
 
 elif arguments.cp:
 
-    cp()
+    path = arguments.cp
+    #num_mod = os.chmod(path[0], stat.S_IWRITE) 
+    #num_mod = str(num_mod) 
+    files = find_files(path[0])
+    cp(path[1], files) 
 
 elif arguments.mv:
 
