@@ -151,10 +151,14 @@ def find():
                 print(f) 
 
 def cat(path = "arguments.cat"):
-
-    with open(path, 'rb') as file :
-       contents = os.popen(file).read()
-       print(contents)
+    
+    file_path = path 
+    if os.path.exists(file_path) :
+        with open(file_path, 'rb') as file :
+            contents = file.read()
+            print(contents)
+    else :  
+        print("Not found file")
 
 
 parser = setup() 
@@ -205,7 +209,7 @@ elif arguments.find:
 
 elif arguments.cat:
 
-     path = arguments.cat
+    path = arguments.cat
 
 elif arguments.show_logs:
 
