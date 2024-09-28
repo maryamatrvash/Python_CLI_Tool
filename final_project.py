@@ -108,10 +108,6 @@ def rm_r():
                 os.rmdir(f_path)    
     rmdir(path) 
          
-    #remove_file = rm(path)
-    #del_ditrs = rmdir(path) 
-    #print("done")  
-    #print("delete directory") 
 
 def find_files(path_pc):
     files_name = []
@@ -154,8 +150,12 @@ def find():
             if f.endswith(path[1]): 
                 print(f) 
 
-def cat():
-    ...           
+def cat(path = "arguments.cat"):
+
+    with open(path, 'rb') as file :
+       contents = os.popen(file).read()
+       print(contents)
+
 
 parser = setup() 
 arguments = parser.parse_args() 
@@ -205,6 +205,8 @@ elif arguments.find:
 
 elif arguments.cat:
 
-    ...
+     path = arguments.cat
+
 elif arguments.show_logs:
+
     show_log() 
