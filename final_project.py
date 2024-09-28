@@ -106,7 +106,8 @@ def rm_r():
                 f2_path = os.path.join(f_path, f)
                 os.remove(f2_path)
                 os.rmdir(f_path)    
-        
+    rmdir(path) 
+         
     #remove_file = rm(path)
     #del_ditrs = rmdir(path) 
     #print("done")  
