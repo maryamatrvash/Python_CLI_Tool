@@ -165,7 +165,7 @@ parser = setup()
 arguments = parser.parse_args() 
 cmd = " ".join(sys.argv) 
 
-log_command(cmd)
+log_command(cmd) 
 
 if arguments.ls:
 
